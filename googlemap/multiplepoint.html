@@ -1,0 +1,60 @@
+<style>
+#map {
+  height: 300px;
+  border: 1px solid #000;
+}
+
+</style>
+<script>
+/**
+window.onload = function() {
+    var latlng = new google.maps.LatLng(51.4975941, -0.0803232);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: latlng,
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: 'Set lat/lon values for this property',
+        draggable: true
+    });
+    google.maps.event.addListener(marker, 'dragend', function(a) {
+        console.log(a);
+        var div = document.createElement('div');
+        div.innerHTML = a.latLng.lat().toFixed(4) + ', ' + a.latLng.lng().toFixed(4);
+        document.getElementsByTagName('body')[0].appendChild(div);
+    });
+};
+
+**/
+
+window.onload = function() {
+    var latlng = new google.maps.LatLng(2.046934, 45.318162);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: latlng,
+        zoom: 11,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+	
+	
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: 'Set lat/lon values for this property',
+        draggable: true
+    });
+    google.maps.event.addListener(marker, 'dragend', function(a) {
+        console.log(a);
+        var div = document.createElement('div');
+        div.innerHTML = 'Location/Settlement: <input type="text" value="" > Latitude: <input type="text" value="'+a.latLng.lat().toFixed(4) + '">, Longitude: <input type="text" value="' + a.latLng.lng().toFixed(4) + '">';
+        document.getElementsByTagName('body')[0].appendChild(div);
+    });
+};
+</script>
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABDtmTfMBisFzZ2ajsUlRgDHi95680Xjw&sensor=false&callback=initialize"></script>
+   
+<div id="map"></div>
+

@@ -1,0 +1,5 @@
+http://stackoverflow.com/questions/9000813/get-latitude-longitude-coordinates-from-a-google-map-using-a-marker
+
+http://jsfiddle.net/salman/ZW9jP/4/
+
+http://salman-w.blogspot.co.ke/2009/03/latitude-longitude-finder-tool.html

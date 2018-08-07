@@ -1,0 +1,10 @@
+ALTER TABLE  `statisticalreports` ADD  `graphcategories` VARCHAR( 100 ) NOT NULL ,
+ADD  `graphseries` VARCHAR( 100 ) NOT NULL ,
+ADD  `map_name` VARCHAR( 100 ) NOT NULL ,
+ADD  `task_pie` VARCHAR( 100 ) NOT NULL ,
+ADD  `distribution_graph` VARCHAR( 100 ) NOT NULL ,
+ADD  `sector_graph` VARCHAR( 100 ) NOT NULL
+
+
+ALTER TABLE  `statisticalreports` CHANGE  `graphcategories`  `graphcategories` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL ,
+CHANGE  `graphseries`  `graphseries` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
